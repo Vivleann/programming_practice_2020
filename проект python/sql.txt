@@ -1,0 +1,7 @@
+import sqlite3
+conn = sqlite3.connect('Chinook_Sqlite.sqlite')
+
+# Создаем курсор - это специальный объект который делает запросы и получает их результаты
+cursor = conn.cursor()
+cursor.execute("SELECT Name FROM Artist LIMIT 3")
+conn.close()
